@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import { createResource } from "./FetchPerson";
 import Person from "./Person";
+import Num from "./Num";
 
 const resource = createResource();
 console.log(resource);
@@ -10,6 +11,7 @@ function App() {
         <div>
             <Suspense fallback={<h1>Loading</h1>}>
                 <Person resource={resource} />
+                <Num resource={resource} />
             </Suspense>
         </div>
     );

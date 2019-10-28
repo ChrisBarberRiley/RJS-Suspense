@@ -31,8 +31,17 @@ const promiseWrapper = promise => {
     };
 };
 
+export const randomNumber = async () => {
+    return new Promise(res =>
+        setTimeout(() => {
+            res(Math.random());
+        }, 3000)
+    );
+};
+
 export const createResource = () => {
     return {
-        person: promiseWrapper(fetchPerson())
+        person: promiseWrapper(fetchPerson()),
+        num: promiseWrapper(randomNumber())
     };
 };
