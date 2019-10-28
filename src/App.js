@@ -11,6 +11,8 @@ function App() {
         <div>
             <Suspense fallback={<h1>Loading</h1>}>
                 <Person resource={resource} />
+            </Suspense>
+            <Suspense fallback={<h1>Loading</h1>}>
                 <Num resource={resource} />
             </Suspense>
         </div>
